@@ -31,21 +31,26 @@ CLASS z518375_high_scores DEFINITION
 ENDCLASS.
 
 
-CLASS z518375_high_scores IMPLEMENTATION.
+
+CLASS Z518375_HIGH_SCORES IMPLEMENTATION.
+
 
   METHOD constructor.
     me->scores_list = scores.
   ENDMETHOD.
+
 
   METHOD list_scores.
     " add solution here
     result = me->scores_list.
   ENDMETHOD.
 
+
   METHOD latest.
     " add solution here
    result = scores_list[ lines( scores_list ) ].
   ENDMETHOD.
+
 
   METHOD personalbest.
     " add solution here
@@ -53,10 +58,11 @@ CLASS z518375_high_scores IMPLEMENTATION.
     result = scores_list[ 1 ].
   ENDMETHOD.
 
+
   METHOD personaltopthree.
     " add solution here
-    data top_lines type i.
-    top_lines = lines( scores_list ) .
+   " data top_lines type i.
+    data(top_lines) = lines( scores_list ) .
     sort scores_list by table_line DESCENDING.
     if top_lines > 3.
         top_lines = 3.
@@ -71,6 +77,4 @@ CLASS z518375_high_scores IMPLEMENTATION.
    "  ( scores_list[ i ] )
     " ).
   ENDMETHOD.
-
-
 ENDCLASS.
