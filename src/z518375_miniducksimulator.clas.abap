@@ -19,7 +19,7 @@ CLASS Z518375_MINIDUCKSIMULATOR IMPLEMENTATION.
         data: mallard type ref to z518375_mallardduck.
 
 *         create object mallard.
-         mallard = new #( ).
+         mallard = new #(  ).
 
 *        MallardDuck mallard = new MallardDuck();
 *        FlyBehavior cantFly = () -> System.out.println("I can't fly");
